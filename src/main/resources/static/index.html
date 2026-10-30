@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#182c4d">
+  <meta name="description" content="ShopEase — thoughtful finds for everyday living.">
+  <title>ShopEase — Good finds, every day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="announcement">A little something for your everyday <span>·</span> Discover the ShopEase edit</div>
+  <header class="site-header">
+    <div class="header-main wrap">
+      <a class="brand" href="#top" aria-label="ShopEase home"><span class="brand-mark">S</span><span>shopease<small>good finds, every day</small></span></a>
+      <div class="delivery"><span class="pin">⌖</span><span><small>Delivering to</small><strong>Indiranagar, Bengaluru</strong></span></div>
+      <form id="search-form" class="searchbox" role="search">
+        <label class="sr-only" for="category-filter">Search category</label>
+        <select id="category-filter"><option value="">All</option></select>
+        <label class="sr-only" for="search">Search ShopEase</label>
+        <input id="search" type="search" placeholder="Search for products, brands and more" autocomplete="off" list="search-suggestions">
+        <datalist id="search-suggestions"></datalist>
+        <button type="button" id="clear-search" class="hidden" aria-label="Clear search" title="Clear search">×</button>
+        <button aria-label="Search">⌕</button>
+      </form>
+      <div class="header-actions">
+        <button class="account-action" id="account-info" type="button"><span class="action-icon">♙</span><span><small>Hello, shopper</small><strong>Guest account</strong></span></button>
+        <a class="icon-action wishlist-link" href="#wishlist" aria-label="Wishlist"><span>♡</span><b id="wishlist-count">0</b></a>
+        <a class="icon-action cart-link" href="#cart" aria-label="Shopping cart"><span>▱</span><b id="cart-count">0</b></a>
+      </div>
+    </div>
+    <nav class="subnav"><div class="wrap subnav-inner">
+      <a href="#category-grid">Shop by category</a><a href="#deals">Today's finds</a><a href="#best-sellers">Best sellers</a><a href="#new-arrivals">New arrivals</a><a href="#products">All products</a><a href="#newsletter">The ShopEase note</a>
+      <span class="nav-promise">Thoughtful picks. Everyday prices.</span>
+    </div></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy"><span class="eyebrow">THE EVERYDAY EDIT · 2026</span><h1 id="hero-title">Good things<br>make good days.</h1><p>Little upgrades, considered essentials, and new favourites for the way you live.</p><a class="button button-dark" href="#products">Explore the collection <span>→</span></a><div class="hero-trust"><span>✳ Carefully picked</span><span>◷ Easy browsing</span><span>♡ Made for everyday</span></div></div>
+      <div class="hero-art" aria-label="Illustrated collection of everyday finds" role="img"><div class="sun-disc"></div><div class="art-label">THE GOOD<br>FINDS CLUB</div><div class="art-product art-cup">☕</div><div class="art-product art-bag">⌁</div><div class="art-product art-plant">✳</div><div class="art-caption">A fresh start, in the little things.</div></div>
+      <div class="hero-index">01 <i></i> 03</div>
+    </section>
+
+    <section class="wrap category-section" id="category-grid"><div class="section-head"><div><span class="eyebrow">FIND YOUR NEXT FAVOURITE</span><h2>Browse by category</h2></div><a href="#products" class="text-link">See everything <span>→</span></a></div><div id="category-tiles" class="category-tiles"></div></section>
+
+    <section class="wide-band deals-band" id="deals"><div class="wrap"><div class="section-head"><div><span class="eyebrow">A GOOD DAY TO DISCOVER</span><h2>Today's good finds</h2><p class="section-note">Lovely things, picked for everyday.</p></div><a href="#products" class="text-link">Shop all finds <span>→</span></a></div><div id="deal-grid" class="product-strip"></div></div></section>
+    <section class="wrap shelf" id="best-sellers"><div class="section-head"><div><span class="eyebrow">LOVED BY THE COMMUNITY</span><h2>Little crowd favourites</h2></div><a href="#products" class="text-link">Meet them all <span>→</span></a></div><div id="best-grid" class="product-strip"></div></section>
+    <section class="wrap shelf" id="recommended"><div class="section-head"><div><span class="eyebrow">PICKED FOR A GOOD DAY</span><h2>Recommended for you</h2></div><a href="#products" class="text-link">Explore all finds <span>→</span></a></div><div id="recommended-grid" class="product-strip"></div></section>
+    <section class="feature-panel wrap" id="featured"><div class="feature-copy"><span class="eyebrow">THE SHOPEASE POINT OF VIEW</span><h2>Better everyday,<br>one find at a time.</h2><p>From useful little upgrades to things that make home feel more like yours, there is something worth keeping in every corner.</p><a href="#products" class="button button-light">Meet the collection <span>→</span></a></div><div class="feature-stamp">THE<br>GOOD<br>EDIT <span>✳</span></div></section>
+    <section class="wrap brand-section"><div class="section-head"><div><span class="eyebrow">BRANDS IN THE COLLECTION</span><h2>Good company</h2></div></div><div id="brand-strip" class="brand-strip"></div></section>
+    <section class="wrap promo-banner"><div><span class="eyebrow">A LITTLE EXTRA TO LOVE</span><h2>Find a favourite.<br>Keep a little change.</h2><p>Selected demo products show their sample list and selling prices.</p><a class="button button-dark" href="#products">See the collection <span>→</span></a></div><div class="promo-sticker"><span>THE<br>GOOD<br>PRICE</span>✳</div></section>
+    <div id="category-shelves"></div>
+
+    <section class="new-arrivals wrap shelf" id="new-arrivals"><div class="section-head"><div><span class="eyebrow">JUST JOINED THE COLLECTION</span><h2>Fresh on the shelves</h2></div><a href="#products" class="text-link">See new arrivals <span>→</span></a></div><div id="new-grid" class="product-strip"></div></section>
+
+    <section class="browse-section" id="products"><div class="wrap"><div class="section-head browse-heading"><div><span class="eyebrow">THE WHOLE COLLECTION</span><h2>Find your thing</h2><p id="result-count" class="section-note">Loading the collection…</p></div><label class="sort-control">Sort by <select id="sort"><option value="featured">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name">Name: A–Z</option><option value="newest">Newest</option></select></label></div>
+      <div class="filters"><label>Min ₹ <input id="min-price" type="number" min="0" placeholder="0"></label><label>Max ₹ <input id="max-price" type="number" min="0" placeholder="Any"></label><label class="check-filter"><input id="in-stock" type="checkbox"> In stock only</label><button class="text-button" id="clear-filters">Clear filters</button></div>
+      <div id="active-filters" class="active-filters"></div><div id="product-list" class="product-grid" aria-live="polite"></div><div id="browse-empty" class="empty-state hidden"><div>⌕</div><h3>No finds just yet</h3><p>Try a different search or clear a filter to see more of the collection.</p><button class="button button-dark" id="empty-reset">Clear filters</button></div><div class="load-more-wrap"><button id="load-more" class="button button-outline hidden">Show more finds</button></div></div></section>
+
+    <section id="wishlist" class="wrap shelf wishlist-section"><div class="section-head"><div><span class="eyebrow">SAVED FOR LATER</span><h2>Your wish list</h2></div><span id="wishlist-note" class="section-note">Keep your favourites close.</span></div><div id="wishlist-grid" class="product-strip"></div></section>
+
+    <section class="newsletter" id="newsletter"><div class="wrap newsletter-inner"><div><span class="eyebrow">A NOTE FROM US</span><h2>Good things in your inbox.</h2><p>Fresh finds, useful inspiration, and the occasional little surprise.</p></div><form id="newsletter-form"><label class="sr-only" for="newsletter-email">Your email address</label><input id="newsletter-email" type="email" placeholder="Your email address" required><button class="button button-dark">Count me in <span>→</span></button><small id="newsletter-message">A demo sign-up only; no email will be sent or stored.</small></form></div></section>
+  </main>
+  <footer class="footer"><div class="wrap footer-top"><a class="brand brand-footer" href="#top"><span class="brand-mark">S</span><span>shopease<small>good finds, every day</small></span></a><p>Thoughtful picks for everyday living.<br>Made for the little moments that make a day.</p><div class="footer-social"><a href="#newsletter" aria-label="Instagram information">ig</a><a href="#newsletter" aria-label="Pinterest information">p</a><a href="#newsletter" aria-label="Facebook information">f</a></div></div><div class="wrap footer-links"><div><strong>Find your way</strong><a href="#category-grid">Categories</a><a href="#deals">Today's finds</a><a href="#best-sellers">Best sellers</a><a href="#products">All products</a></div><div><strong>Shopping with us</strong><a href="#cart">Your cart</a><a href="#newsletter">The ShopEase note</a><a href="#top">Delivery: Indiranagar, Bengaluru</a></div><div><strong>Here to help</strong><span>Customer care demo</span><span>Returns information demo</span><span>Privacy information demo</span><span>Terms information demo</span></div><div><strong>About ShopEase</strong><span>A storefront demonstration</span><span>Guest browsing is enabled</span><span>No account or payment is collected</span></div></div><div class="wrap footer-bottom"><span>© 2026 ShopEase · Storefront demonstration</span><span>Made for good everyday finds ♡</span></div></footer>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true"><div class="drawer-head"><div><span class="eyebrow">YOUR SELECTION</span><h2>Your cart <span id="drawer-cart-count">(0)</span></h2></div><button class="close-drawer" id="close-cart" aria-label="Close cart">×</button></div><div id="cart-list" class="drawer-items"></div><div class="drawer-footer"><div class="cart-footer"><span>Subtotal</span><strong id="cart-total">₹0</strong></div><p>Delivery and taxes are calculated at checkout.</p><button id="checkout-open" class="button button-dark full-button">Continue to checkout <span>→</span></button><button id="clear-cart" class="text-button">Clear cart</button></div></aside><div class="scrim" id="scrim"></div>
+  <dialog id="product-dialog" class="product-dialog"><button class="modal-close" data-close="product-dialog" aria-label="Close details">×</button><div id="product-detail"></div></dialog>
+  <dialog id="checkout-dialog" class="checkout-dialog"><button class="modal-close" data-close="checkout-dialog" aria-label="Close checkout">×</button><span class="eyebrow">A FRIENDLY DEMO</span><h2>Checkout preview</h2><p class="demo-disclaimer">This is a demonstration only. It will not place an order, reserve stock, or process a payment.</p><form id="checkout-form" class="checkout-form"><label>Name<input required name="name" autocomplete="name" minlength="2"></label><label>Email<input required name="email" type="email" autocomplete="email"></label><label>Delivery address<textarea required name="address" autocomplete="street-address" minlength="8"></textarea></label><div id="checkout-summary"></div><button class="button button-dark full-button">Review demo details</button></form><p id="checkout-message" role="status"></p></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <template id="skeleton-template"><article class="skeleton-card"><div class="skeleton-image"></div><div class="skeleton-line"></div><div class="skeleton-line short"></div></article></template>
+  <script src="app.js" defer></script>
+</body>
+</html>
